@@ -18,7 +18,7 @@ JNI不会对底层Java VM的实现产生任何限制。Java VM制造商能够支
 
 原生代码通过调用JNI函数来访问Java VM功能。通过接口指针来访问JNI函数。接口指针是指向指针的指针。这个指针指向一个指针数组，其中每个都指向一个接口函数。每个接口函数都位于数组中预定义的偏移位置。
 
-![](/home/robin/Documents/designa.gif)
+![](./images/designa.gif)
 
 JNI接口指针仅在当前线程中可用。因此，原生方法不能将接口指针从一个线程传递到另一个线程。实现JNI的VM可以在JNI接口指针指向的区域中分配和存储线程本地数据。
 
@@ -338,7 +338,7 @@ typedef jint jsize;
 
 JNI包含很多对应于不同Java对象类型的引用类型。
 
-![](/home/robin/Documents/types4.gif)
+![](./images/types4.gif)
 
 在C中，所有其他JNI引用类型都被定义为与jobject相同。比如:
 
